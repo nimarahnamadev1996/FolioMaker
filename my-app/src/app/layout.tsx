@@ -4,6 +4,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 
 import "./globals.css";
+import LayoutProvider from "@/layout-provider";
+import { Toaster } from "react-hot-toast";
 
 
 const geistSans = Geist({
@@ -30,7 +32,8 @@ export default function RootLayout({
     <ClerkProvider>
        <html lang="en">
          <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-           {children}
+            <LayoutProvider>{children}</LayoutProvider>
+            <Toaster position="top-center" reverseOrder={false} />
          </body>
        </html>
     </ClerkProvider>
