@@ -3,12 +3,10 @@ import React from "react";
 import ExperienceForm from "../../_components/experience-form";
 
 interface IEditExperienceProps {
-  params: {
-    id: string;
-  };
+   id: string;
 }
 
-async function EditExperience({ params }: IEditExperienceProps) {
+async function EditExperience({ params }: { params: IEditExperienceProps }) {
   const { id } = await params;
   const experienceResponse = await getExperienceById(id);
   if (!experienceResponse.success) {

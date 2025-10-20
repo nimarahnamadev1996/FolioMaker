@@ -6,12 +6,10 @@ import { getProjectById } from "@/actions/projects";
 
 
 interface IEditProjectPageProps {
-  params: {
     id: string;
-  };
 }
 
-async function EditProjectPage({ params }: IEditProjectPageProps) {
+async function EditProjectPage({ params }: { params: IEditProjectPageProps }) {
 
   const { id } = await params;
 
