@@ -11,6 +11,7 @@ const Header = () => {
  const {user} = usersGlobalStore() as IUsersGlobalStore
 
   return (
+    
     <div className="bg-primary p-5 flex justify-between items-center">
 
         <h1 className="font-bold text-md text-yellow-500 md:text-2xl">FolioMaker</h1>
