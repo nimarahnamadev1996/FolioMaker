@@ -2,11 +2,8 @@ import { getEducationById } from "@/actions/educations";
 import React from "react";
 import EducationForm from "../../_components/education-form";
 
-interface IEditeducationParams {
-  id: string;
-}
 
-async function EditEducationPage({ params }: { params: IEditeducationParams }) {
+async function EditEducationPage({ params }: { params: { id: string } }) {
 
   const { id } =  params;
 
