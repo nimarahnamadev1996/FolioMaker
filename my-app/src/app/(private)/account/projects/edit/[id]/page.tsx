@@ -11,7 +11,7 @@ interface IEditProjectPageProps {
 
 async function EditProjectPage({ params }: { params: IEditProjectPageProps }) {
 
-  const { id } = await params;
+  const { id } =  params;
 
   const projectResponse = await getProjectById(id);
    

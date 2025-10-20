@@ -7,7 +7,7 @@ interface IEditExperienceProps {
 }
 
 async function EditExperience({ params }: { params: IEditExperienceProps }) {
-  const { id } = await params;
+  const { id } =  params;
   const experienceResponse = await getExperienceById(id);
   if (!experienceResponse.success) {
     return <div>{experienceResponse.message}</div>;

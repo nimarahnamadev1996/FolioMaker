@@ -8,8 +8,8 @@ interface IEditeducationParams {
 
 async function EditEducationPage({ params }: { params: IEditeducationParams }) {
 
-  const { id } = await params;
-  
+  const { id } =  params;
+
   const educationResponse = await getEducationById(id);
   if (!educationResponse.success) {
     return <div>{educationResponse.message}</div>;
