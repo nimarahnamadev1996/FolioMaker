@@ -2,14 +2,14 @@ import { getEducationById } from "@/actions/educations";
 import React from "react";
 import EducationForm from "../../_components/education-form";
 
-interface IEditeducationProps {
-  params: {
-    id: string;
-  };
+interface IEditeducationParams {
+  id: string;
 }
 
-async function EditEducationPage({ params }: IEditeducationProps) {
+async function EditEducationPage({ params }: { params: IEditeducationParams }) {
+
   const { id } = await params;
+  
   const educationResponse = await getEducationById(id);
   if (!educationResponse.success) {
     return <div>{educationResponse.message}</div>;
