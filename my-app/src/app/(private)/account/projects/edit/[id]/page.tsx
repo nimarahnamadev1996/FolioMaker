@@ -5,11 +5,11 @@ import ProjectForm from "../../_components/project-form";
 import { getProjectById } from "@/actions/projects";
 
 
-interface IEditProjectPageProps {
+interface IEditProjectPageParams {
     id: string;
 }
 
-async function EditProjectPage({ params }: { params: IEditProjectPageProps }) {
+async function EditProjectPage({ params }: { params: IEditProjectPageParams}) {
 
   const { id } =  params;
 
